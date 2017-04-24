@@ -64,3 +64,13 @@ To do the setup run ansible playbook as follows:
     ansible-playbook -i ../hosts deploy-elk.yml --private-key <keypair>
 ```
 
+# IP and Ports.
+
+ Service  | Listens on |
+| ------------- | ------------- |
+| wordpress  | 0.0.0.0:8081->80/tcp  |
+| mysqldb  | 3306/tcp  |
+| kibana  | 0.0.0.0:5601->5601/tcp  |
+| logstash  | 0.0.0.0:5000->5000/tcp, 0.0.0.0:25826->25826/tcp, 0.0.0.0:12201->12201/udp  |
+| elasticsearch  | 0.0.0.0:9200->9200/tcp, 0.0.0.0:9300->9300/tcp |
+| Host  | 0.0.0.0:22  |
